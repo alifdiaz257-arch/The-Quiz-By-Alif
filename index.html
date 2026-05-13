@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://media.base44.com/images/public/6a0479d186de83a1586c77eb/8b5235a07_logo.png" rel="icon" type="image/svg+xml"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <title>
+   Statistics | QuizPulse
+  </title>
+  <script crossorigin="" src="/assets/index-DvFzXeXF.js" type="module">
+  </script>
+  <link crossorigin="" href="/assets/index-CMYFxK5Y.css" rel="stylesheet"/>
+  <script type="module">
+   if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "6a0479d186de83a1586c77eb";
+    if (!appId) return;
+    fetch(`/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+  </script>
+  <meta content="Statistics on QuizPulse. An immersive, high-energy quiz platform featuring real-time team battles, intera." name="description"/>
+  <meta content="Statistics | QuizPulse" property="og:title"/>
+  <meta content="Statistics on QuizPulse. An immersive, high-energy quiz platform featuring real-time team battles, intera." property="og:description"/>
+  <meta content="https://media.base44.com/images/public/6a0479d186de83a1586c77eb/8b5235a07_logo.png/v1/fill/w_1200,h_630/8b5235a07_logo.png" property="og:image"/>
+  <meta content="https://pulse-quiz-flow-byalif.base44.app/Statistics" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="QuizPulse" property="og:site_name"/>
+  <meta content="Statistics | QuizPulse" name="twitter:title"/>
+  <meta content="Statistics on QuizPulse. An immersive, high-energy quiz platform featuring real-time team battles, intera." name="twitter:description"/>
+  <meta content="https://media.base44.com/images/public/6a0479d186de83a1586c77eb/8b5235a07_logo.png/v1/fill/w_1200,h_630/8b5235a07_logo.png" name="twitter:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://pulse-quiz-flow-byalif.base44.app/Statistics" name="twitter:url"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="QuizPulse" name="apple-mobile-web-app-title"/>
+  <link href="https://pulse-quiz-flow-byalif.base44.app/Statistics" rel="canonical"/>
+  <script data-seo-source="builder" type="application/ld+json">
+   {"name": "QuizPulse", "@context": "https://schema.org", "@type": "WebSite", "url": "https://pulse-quiz-flow-byalif.base44.app"}
+  </script>
+  <script data-seo-source="builder" type="application/ld+json">
+   {"name": "QuizPulse", "logo": "https://media.base44.com/images/public/6a0479d186de83a1586c77eb/8b5235a07_logo.png", "@context": "https://schema.org", "@type": "Organization", "url": "https://pulse-quiz-flow-byalif.base44.app"}
+  </script>
+  <script data-seo-source="builder" type="application/ld+json">
+   {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pulse-quiz-flow-byalif.base44.app/"}, {"@type": "ListItem", "position": 2, "name": "Statistics | QuizPulse", "item": "https://pulse-quiz-flow-byalif.base44.app/Statistics"}]}
+  </script>
+  <script async="true" data-app-id="6a0479d186de83a1586c77eb" data-app-name="QuizPulse" data-platform-url="https://app.base44.com" src="/static/js/badge.js">
+  </script>
+ </head>
+ <body>
+  <div id="root">
+   <div data-seo-source="builder" id="seo-snapshot" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+    <h1>
+     Statistics | QuizPulse
+    </h1>
+    <p>
+     Statistics on QuizPulse. An immersive, high-energy quiz platform featuring real-time team battles, intera.
+    </p>
+    <nav aria-label="Pages">
+     <h2>
+      Pages
+     </h2>
+     <ul>
+      <li>
+       <a href="/">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="/host/create">
+        Create Quiz
+       </a>
+      </li>
+      <li>
+       <a href="/host/quizzes">
+        My Quizzes
+       </a>
+      </li>
+      <li>
+       <a href="/HostGame">
+        Host Game
+       </a>
+      </li>
+      <li>
+       <a href="/PlayerJoin">
+        Player Join
+       </a>
+      </li>
+      <li>
+       <a href="/PlayerGame">
+        Player Game
+       </a>
+      </li>
+      <li>
+       <a href="/host/themes">
+        Theme Manager
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </div>
+ </body>
+</html>
